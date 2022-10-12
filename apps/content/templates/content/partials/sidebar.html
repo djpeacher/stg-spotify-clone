@@ -1,0 +1,26 @@
+{% load static %}
+<nav id="sidebar">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+        </button>
+    </div>
+    <div class="img bg-wrap text-center py-4">
+        <a href="{% url 'home' %}">
+        <div class="user-logo">
+            <div class="img" style="background-image: url({% static 'content/images/summit.jpeg' %});"></div>
+            <h3>STG Djangocon US 2022</h3>
+        </div>
+        </a>
+    </div>
+    <ul class="list-unstyled components mb-5">
+        <li {% if active_tab == "home" %}class="active"{% endif %}>
+            <a href="{% url 'home' %}"><span class="fa fa-home mr-3"></span> Home</a>
+        </li>
+        <li {% if active_tab == "dashboard" %}class="active"{% endif %}>
+            <a href="{% url 'dashboard' %}"><span class="fa fa-star mr-3"></span> Dashboard</a>
+        </li>
+        <li {% if active_tab == "resources" %}class="active"{% endif %}>
+            <a href="{% url 'resources' %}"><span class="fa fa-book mr-3"></span> Resources</a>
+        </li>
+    </ul>
+</nav>
