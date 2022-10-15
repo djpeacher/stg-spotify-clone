@@ -22,10 +22,25 @@ _NOTE:_ [Chart.js](https://www.chartjs.org/) has been provided in the templates 
 
 - TBD...
 
+### Getting Started
+
+1. clone repo
+1. create separate branch
+1. `make build`
+1. django admin login: `admin / admin`
+
+### Submission
+
+When finished, please push your branch to origin and create a pull request. We will judge all submissions on the following criteria:
+
+1. minimum requirements met
+2. performance
+3. submitted before the deadline
+
 ### Resources
 
 - [GitHub Repo](https://github.com/Lenders-Cooperative/stg-spotify-clone)
 - [Official Django Docs](https://docs.djangoproject.com/en/4.1/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 - [Chart.js](https://www.chartjs.org/)
-- [STG Website](https://thesummitgrp.com/company/careers-index.html)
+- [Summit Technology Group (STG)](https://thesummitgrp.com/company/careers-index.html)
