@@ -1,5 +1,5 @@
 build:
-	docker compose up --build
+	docker compose build
 
 run:
 	docker compose up
@@ -20,7 +20,7 @@ bash:
 
 data:
 	docker compose run web python manage.py seed_data
-	
+
 shell:
 	docker compose run web python manage.py shell_plus
 
