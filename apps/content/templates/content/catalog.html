@@ -1,0 +1,35 @@
+{% extends "content/base.html" %}
+{% load static %}
+{% block title %}
+    Music Catalog
+{% endblock %}
+
+{% block header %}
+    Music Catalog
+{% endblock %}
+
+{% block content %}
+    <h5>Songs</h5>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Song</th>
+            <th scope="col">Album</th>
+            <th scope="col">Time Length</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for song in songs|slice:":500" %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ song.artist.name }}</td>
+                    <td>{{ song.name }}</td>
+                    <td>{{ song.album }}</td>
+                    <td>{{ song.time_length|time:'H:i' }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}

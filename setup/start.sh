@@ -7,9 +7,6 @@ set -o nounset
 # migrate
 python manage.py migrate
 
-# add seed data
-python manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL
-
 echo "Populating city, region, subregion, country data..."
 # python manage.py cities_light
 

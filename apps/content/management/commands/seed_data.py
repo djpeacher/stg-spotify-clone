@@ -1,6 +1,7 @@
 import csv
 
 from django.apps import apps
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand, CommandError
 from django.core.management.color import no_style
@@ -63,6 +64,9 @@ class Command(BaseCommand):
         seeder = Seed.seeder()
 
         # populate user data
+        if not User.objects.filter(username=settings.DJANGO_SUPERUSER_USERNAME).exists():
+            User.objects.create_superuser(settings.DJANGO_SUPERUSER_USERNAME, settings.DJANGO_SUPERUSER_EMAIL, settings.DJANGO_SUPERUSER_PASSWORD)
+
         seeder.add_entity(User, 100)
         seeder.add_entity(Profile, 100)
 
@@ -82,15 +86,15 @@ class Command(BaseCommand):
             {"name": lambda x: seeder.faker.name()},
         )
         seeder.add_entity(
-            Song,
-            1000,
+            Album,
+            300,
             {
                 "name": lambda x: seeder.faker.sentence(),
             },
         )
         seeder.add_entity(
-            Album,
-            300,
+            Song,
+            1000,
             {
                 "name": lambda x: seeder.faker.sentence(),
             },

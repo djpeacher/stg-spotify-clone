@@ -23,3 +23,7 @@ data:
 	
 shell:
 	docker compose run web python manage.py shell_plus
+
+lint:
+	isort .
+	black .
