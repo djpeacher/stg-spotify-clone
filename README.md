@@ -24,14 +24,14 @@ _NOTE:_ [Chart.js](https://www.chartjs.org/) has been provided in the templates 
 
 ### Getting Started
 
-1. clone repo
-1. create separate branch
+1. install docker / docker-compose
+1. fork repo and clone locally
 1. `make build`
 1. django admin login: `admin / admin`
 
 ### Submission
 
-When finished, please push your branch to origin and create a pull request. We will judge all submissions on the following criteria:
+When finished, please create a pull request from your fork. We will judge all submissions on the following criteria:
 
 1. minimum requirements met
 2. performance
