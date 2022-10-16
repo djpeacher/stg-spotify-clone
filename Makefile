@@ -1,28 +1,28 @@
 build:
-	docker compose up --build
+	docker-compose up --build
 
 run:
-	docker compose up
+	docker-compose up
 
 destroy:
-	docker compose down -v
+	docker-compose down -v
 
 rebuild: destroy build
 
 makemigrations:
-	docker compose run web python manage.py makemigrations
+	docker-compose run web python manage.py makemigrations
 
 migrate:
-	docker compose run web python manage.py migrate
+	docker-compose run web python manage.py migrate
 
 bash:
-	docker compose run web bash
+	docker-compose run web bash
 
 data:
-	docker compose run web python manage.py seed_data
+	docker-compose run web python manage.py seed_data
 	
 shell:
-	docker compose run web python manage.py shell_plus
+	docker-compose run web python manage.py shell_plus
 
 lint:
 	isort .
