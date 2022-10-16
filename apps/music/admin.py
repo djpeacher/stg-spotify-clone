@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Album, Artist, Genre, Playlist, RecordLabel, Song
+from .models import Album, Artist, Genre, Playlist, RecordLabel, Song, SongPlayLog
 
 
 @admin.register(Genre)
@@ -36,3 +36,9 @@ class PlaylistAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).prefetch_related("songs")
+
+
+@admin.register(SongPlayLog)
+class SongPlayLogAdmin(admin.ModelAdmin):
+    list_display = ["user", "song", "date_played"]
+    list_select_related = ("user", "song")

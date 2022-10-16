@@ -7,7 +7,7 @@ run:
 destroy:
 	docker-compose down -v
 
-rebuild: destroy build
+rebuild: destroy build run
 
 makemigrations:
 	docker-compose run web python manage.py makemigrations

@@ -79,7 +79,15 @@ class Song(models.Model):
 class Playlist(models.Model):
     name = models.CharField(max_length=150)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="playlists")
-    songs = models.ManyToManyField(Song)
+
+    def __str__(self):
+        return str(self.pk)
+
+
+class SongPlayLog(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recently_played_logs")
+    song = models.ForeignKey(Song, on_delete=models.CASCADE, related_name="play_logs")
+    date_played = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(self.pk)

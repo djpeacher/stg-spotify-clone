@@ -12,7 +12,7 @@ This website is a mock Spotify-Clone platform that is non-customer facing. It is
 1. Create a dashboard using the provided models and dummy data:
    - Detailed breakdown per Genre (# of Artists, # of Songs, # of Albums, etc.)
    - Detailed song breakdown (# of Songs per Artist, Average length of song, etc.)
-   - Top 10 Artists by Monthly Listeners (WIP)
+   - Top 10 Artists by Monthly Listeners
    - etc...
 1. Ensure the queries are as performant as possible. We will be judging on performance!
 
@@ -27,7 +27,9 @@ _NOTE:_ [Chart.js](https://www.chartjs.org/) has been provided in the templates 
 1. install docker / docker-compose
 1. fork repo and clone locally
 1. `make build`
-1. django admin login: `admin / admin`
+1. `make run`
+1. navigate to `localhost:8000`
+   - django admin login: `admin / admin`
 
 ### Submission
 
