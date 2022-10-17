@@ -18,10 +18,6 @@ This website is a mock Spotify-Clone platform that is non-customer facing. It is
 
 _NOTE:_ [Chart.js](https://www.chartjs.org/) has been provided in the templates already for ease of use but any charting package of your preference is welcome. In addition to that, [django-debug-toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) has already been installed and is ready for use so you can fine-tune all of your queries.
 
-### Challenge #2: User Authentication
-
-- TBD...
-
 ### Getting Started
 
 1. install docker / docker-compose
